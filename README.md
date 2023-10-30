@@ -1,4 +1,7 @@
 # cleverspace.io_event_scheduler
+- LIVE DEPLOYED ON AWS 
+- configured nginx and gunicorn
+LIVE LINK : http://16.16.183.89/
 ## Application includes
 - Django rest api as backend
 - used normal django to render the home page and also used python reqests to comunicate it with backend api
