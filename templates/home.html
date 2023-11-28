@@ -64,7 +64,7 @@
 
                 $.ajax({
                     type: "POST",
-                    url: 'http://127.0.0.1:8000/api/tasks/',
+                    url: 'https://cleverspace.onrender.com/api/tasks/',
                     headers: {
                         'Authorization': 'Bearer {{token}}' // Replace YOUR_ACCESS_TOKEN with your actual token
                     },
@@ -92,7 +92,7 @@
                var end = $.fullCalendar.formatDate(event.end, "Y-MM-DD");
                var title = event.title;
                var id = event.id;
-               var url = 'http://127.0.0.1:8000/api/tasks/' + id + '/';
+               var url = 'https://cleverspace.onrender.com/api/tasks/' + id + '/';
                $.ajax({
                    type: "PUT",
                    url: url,
@@ -121,7 +121,7 @@
                var end = $.fullCalendar.formatDate(event.end, "Y-MM-DD");
                var title = event.title;
                var id = event.id;
-               var url = 'http://127.0.0.1:8000/api/tasks/' + id + '/';
+               var url = 'https://cleverspace.onrender.com/api/tasks/' + id + '/';
                $.ajax({
                    type: "PUT",
                    url: url,
@@ -148,7 +148,7 @@
            eventClick: function (event) {
                if (confirm("Are you sure you want to remove it?")) {
                    var id = event.id;
-                   var url = 'http://127.0.0.1:8000/api/tasks/' + id + '/';
+                   var url = 'https://cleverspace.onrender.com/api/tasks/' + id + '/';
                    $.ajax({
                        type: "DELETE",
                        url: url,
