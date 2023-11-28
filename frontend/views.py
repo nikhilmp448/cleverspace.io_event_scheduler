@@ -24,7 +24,7 @@ def login_page(request):
         json_data = json.dumps(data)
         headers = {'Content-Type': 'application/json'}
         # Make a POST request to the external RESTAPI
-        api_url = 'http://127.0.0.1:8000/api/user/login/'
+        api_url = 'https://cleverspace.onrender.com/api/user/login/'
         response = requests.post(api_url, data=json_data, headers=headers)
 
         if response.status_code == 200 :
