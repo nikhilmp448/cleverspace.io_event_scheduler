@@ -24,7 +24,7 @@ def login_page(request):
         json_data = json.dumps(data)
         headers = {'Content-Type': 'application/json'}
         # Make a POST request to the external RESTAPI
-        api_url = 'http://127.0.0.1:8000/api/user/login/'
+        api_url = 'https://cleverspace.onrender.com/api/user/login/'
         response = requests.post(api_url, data=json_data, headers=headers)
 
         if response.status_code == 200 :
@@ -63,7 +63,7 @@ def register_page(request):
         json_data = json.dumps(data)
         headers = {'Content-Type': 'application/json'}
         # Make a POST request to the external RESTAPI
-        api_url = 'http://127.0.0.1:8000/api/user/register/'
+        api_url = 'https://cleverspace.onrender.com/api/user/register/'
         response = requests.post(api_url, data=json_data, headers=headers)
         if response.status_code == 201 :
             return redirect('login')
@@ -79,7 +79,7 @@ def login_otp_page(request):
         json_data = json.dumps(data)
         headers = {'Content-Type': 'application/json'}
         # Make a POST request to the external RESTAPI
-        api_url = 'http://127.0.0.1:8000/api/user/otp/'
+        api_url = 'https://cleverspace.onrender.com/api/user/otp/'
         response = requests.post(api_url, data=json_data, headers=headers)
         if response.status_code == 200 :
             return redirect('verify_otp')
@@ -96,7 +96,7 @@ def otp_page(request):
         }
         
         # Make a GET request to the external REST API with parameters using the params keyword
-        api_url = 'http://127.0.0.1:8000/api/user/otp/'
+        api_url = 'https://cleverspace.onrender.com/api/user/otp/'
         response = requests.get(api_url, params=params)
 
         if response.status_code == 200:
@@ -133,7 +133,7 @@ def all_events(request):
     headers = {
     "Authorization": f"Bearer {token}"  # For a bearer token
     }
-    api_url = 'http://127.0.0.1:8000/api/tasks/'
+    api_url = 'https://cleverspace.onrender.com/api/tasks/'
     response = requests.get(api_url, headers=headers)
     out = [] 
     if response.status_code == 200:
